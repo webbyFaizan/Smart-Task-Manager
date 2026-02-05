@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Smart Task Manager</h1>
+        <button id="themeToggle">🌙 Toggle Theme</button>
+    </div>
+
+    <div class="input-section">
+        <input type="text" id="taskInput" placeholder="Enter new task...">
+        <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <div class="board">
+        <div class="column" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>To Do</h2>
+        </div>
+
+        <div class="column" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>In Progress</h2>
+        </div>
+
+        <div class="column" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>Done</h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
